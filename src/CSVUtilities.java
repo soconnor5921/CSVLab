@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.Buffer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,25 +18,17 @@ public class CSVUtilities
 
     public CSVUtilities(File csv)
     {
-        List<String> scores = new ArrayList<>();
-        Path pathToFile = Paths.get(csv.getName());
 
-        try(BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII))
-        {
-            String line = br.readLine();
-            while(line != null)
-            {
-                String[] attributes = line.split(",");
-            }
-        }
-        catch(IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
+    }
+
+    public void read(File file)
+    {
+
     }
 
     public List<String> getColumnHeaders()
     {
+        ArrayList<String> headers = new ArrayList<>();
 
     }
 
